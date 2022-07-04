@@ -10,12 +10,9 @@
 
 </head>
 <style>
-    {
-        margin: 0px;
-        background-color: aliceblue;
-        font-family: 'Nerko One', cursive;
+    h1{
+        text-align: center ;
     }
-
     button {
         font-size: 16px;
         text-align: center;
@@ -24,7 +21,7 @@
     }
 
     .page-nav {
-        background-color: #2196F3;
+        background-color: #0dcaf0;
         border: 1px solid black;
         position: relative;
     }
@@ -39,14 +36,11 @@
         border: 2px solid #008CBA; /* Blue */
         transition-duration: 0.4s;
         position: absolute;
-        right: 15px;
+        right: 15px;41
+
         bottom: 15px;
     }
 
-    .button-checkout:hover {
-        background-color: #008CBA; /* Blue */
-        color: white;
-    }
 
     .page-content {
         display: flex;
@@ -55,7 +49,7 @@
     }
 
     .product-container {
-        margin: 15px;
+        margin: 20px;
         padding: 2px 16px;
         position: relative;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);

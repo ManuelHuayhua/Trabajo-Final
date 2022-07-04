@@ -12,6 +12,9 @@ class Articulo extends Eloquent
     protected  $fillable=[
         'libro',
         'descripcion',
+        'precio',
+        'imagen',
         'email'
+
     ];
 }

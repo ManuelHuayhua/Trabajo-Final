@@ -14,14 +14,18 @@ class CategoriaController extends Controller
     public function create(){
 
         return view('categoria.create');
-
     }
+
+
+
 
     public function insert(Request $request){
 
 $categoria= new Categoria();
 $categoria->libro=$request->libro;
 $categoria->descripcion=$request->descripcion;
+$categoria->precio=$request->precio;
+$categoria->imagen=$request->imagen;
 $categoria->estado=1;
 $categoria->save();
 return redirect('categorias');
@@ -39,6 +43,8 @@ return redirect('categorias');
         $categoria= Categoria::find($id);
         $categoria->libro = $request->libro;
         $categoria->descripcion = $request->descripcion;
+        $categoria->precio = $request->precio;
+        $categoria->imagen = $request->imagen;
         $categoria->save();
 
         return redirect('/categorias');
@@ -53,8 +59,8 @@ return redirect('categorias');
     }
 
     public function libro(){
-       $categoria=Categoria::all();
-        return view('categoria.libro1');
+       $categorias=Categoria::all();
+        return view('categoria.libro1')->with('categorias',$categorias) ;
 
 
     }

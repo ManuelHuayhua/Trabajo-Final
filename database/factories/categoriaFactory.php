@@ -16,7 +16,10 @@ class categoriaFactory extends Factory
         return [
             'libro'=>$this->faker->text(10),
             'descripcion'=>$this->faker->text(),
-            'estado'=> 1
+            'precio'=>$this->faker->numberBetween(150,250),
+            'imagen'=>$this->faker->imageUrl(),
+            'estado'=> $this->faker->numberBetween(1,0)
+
         ];
     }
 }
